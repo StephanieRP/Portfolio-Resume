@@ -68,6 +68,9 @@ html, body {
 
 @title-font-side: 1.5rem;
 
+@mobile: (max-width: 500px);
+@tablet: (max-width: 1000px);
+
 
 //Mixins 
 	.flexit() {
@@ -93,10 +96,18 @@ html, body {
 .head {
 	background: @background-color;
 	padding-bottom: 5rem;
+	@media @mobile {
+		padding-top: 1rem;
+	}
 
 }
 
 nav {
+
+	@media @mobile {
+		display: none;
+	}
+
 	padding-bottom: 1rem;
 	ul {
 		.flexit;
@@ -124,6 +135,10 @@ nav {
 	border-radius: .8rem;
 	color: @background-color;
 
+	@media @mobile {
+		padding: 1rem;
+	}
+
 		h1 {
 			font-size: 2rem;
 			font-weight: 600;
@@ -142,6 +157,9 @@ nav {
 
 .wrapper {
 	.flexit();
+	@media @mobile {
+		flex-direction: column;
+	}
 	
 }
 
@@ -149,6 +167,9 @@ nav {
 	background: @main-color;
 	width: 30%;
 	color: @background-color;
+	@media @mobile {
+		width: 100%;
+	}
 
 
 	h3 {
@@ -207,6 +228,12 @@ nav {
 	border-bottom: none;
 	border-right: none;
 	padding: 2rem;
+	padding-bottom: 0;
+	line-height: 1.5;
+	font-weight: 300;
+	@media @mobile {
+		width: 100%;
+	}
 
 		h3 {
 			font-size: 2rem;
@@ -215,6 +242,10 @@ nav {
 			letter-spacing: .5rem;
 			text-transform: uppercase;
 			padding: 1rem;
+
+			@media @tablet {
+				text-decoration: underline;
+			}
 			
 			&::before {
 				content: '';
@@ -224,6 +255,11 @@ nav {
 				position: absolute;
 				top: 45%;
 				left: 10%;
+				@media @tablet {
+					display: none;
+				}
+			
+				
 
 			}
 
@@ -235,6 +271,11 @@ nav {
 				position: absolute;
 				top: 45%;
 				right: 10%;
+				@media @tablet {
+					display: none;
+				}
+
+			
 
 			}
 	}
@@ -254,6 +295,19 @@ nav {
 			.flexit();
 			justify-content: center;
 			text-align: justify;
+			
+			ul:first-of-type {
+				@media @mobile {
+					display: none;
+				}
+			}
+
+			ul {
+				@media @mobile {
+					text-align: center;
+					font-size: .9rem;
+				}
+			}
 
 			li {
 				padding-right: .5rem;
@@ -285,6 +339,9 @@ nav {
 				}
 		}
 	}
+
+	
 	
 }
+
 

@@ -142,8 +142,18 @@ body {
   background: #2B343C;
   padding-bottom: 5rem;
 }
+@media (max-width: 500px) {
+  .head {
+    padding-top: 1rem;
+  }
+}
 nav {
   padding-bottom: 1rem;
+}
+@media (max-width: 500px) {
+  nav {
+    display: none;
+  }
 }
 nav ul {
   display: flex;
@@ -165,6 +175,11 @@ nav ul li a {
   border-radius: 0.8rem;
   color: #2B343C;
 }
+@media (max-width: 500px) {
+  .title {
+    padding: 1rem;
+  }
+}
 .title h1 {
   font-size: 2rem;
   font-weight: 600;
@@ -181,10 +196,20 @@ nav ul li a {
 .wrapper {
   display: flex;
 }
+@media (max-width: 500px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
 .side-bar {
   background: #1AB3A7;
   width: 30%;
   color: #2B343C;
+}
+@media (max-width: 500px) {
+  .side-bar {
+    width: 100%;
+  }
 }
 .side-bar h3 {
   border: white 0.3rem solid;
@@ -237,6 +262,14 @@ nav ul li a {
   border-bottom: none;
   border-right: none;
   padding: 2rem;
+  padding-bottom: 0;
+  line-height: 1.5;
+  font-weight: 300;
+}
+@media (max-width: 500px) {
+  .main {
+    width: 100%;
+  }
 }
 .main h3 {
   font-size: 2rem;
@@ -245,6 +278,11 @@ nav ul li a {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   padding: 1rem;
+}
+@media (max-width: 1000px) {
+  .main h3 {
+    text-decoration: underline;
+  }
 }
 .main h3::before {
   content: '';
@@ -255,6 +293,11 @@ nav ul li a {
   top: 45%;
   left: 10%;
 }
+@media (max-width: 1000px) {
+  .main h3::before {
+    display: none;
+  }
+}
 .main h3::after {
   content: '';
   width: 20%;
@@ -263,6 +306,11 @@ nav ul li a {
   position: absolute;
   top: 45%;
   right: 10%;
+}
+@media (max-width: 1000px) {
+  .main h3::after {
+    display: none;
+  }
 }
 .main .experience {
   line-height: 2;
@@ -276,6 +324,17 @@ nav ul li a {
   display: flex;
   justify-content: center;
   text-align: justify;
+}
+@media (max-width: 500px) {
+  .main .experience .exp-list ul:first-of-type {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .main .experience .exp-list ul {
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }
 .main .experience .exp-list li {
   padding-right: 0.5rem;
