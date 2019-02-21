@@ -219,7 +219,9 @@ nav {
 .purpose p {
 	padding: 1rem;
 	line-height: 1.5;
+	@media @mobile {
 	font-size: .9rem;
+	}
 }
 
 .contact-list{
@@ -389,6 +391,19 @@ nav {
 		}
 	}
 
+	.copyright {
+		margin-top: 1.2rem;
+		border-radius: .5rem;
+		margin-left: auto;
+		margin-right: auto;
+			a {
+				color: white;
+
+				&:hover {
+					color: @main-color;
+				}
+			}
+	}
 	
 	
 }
