@@ -269,6 +269,7 @@ nav ul li a {
 @media (max-width: 500px) {
   .main {
     width: 100%;
+    border-left: none;
   }
 }
 .main h3 {
@@ -282,6 +283,11 @@ nav ul li a {
 @media (max-width: 1000px) {
   .main h3 {
     text-decoration: underline;
+  }
+}
+@media (max-width: 500px) {
+  .main h3 {
+    font-size: 1.9rem;
   }
 }
 .main h3::before {
@@ -320,6 +326,11 @@ nav ul li a {
   padding: 1rem 0;
   font-size: 1.2rem;
 }
+@media (max-width: 500px) {
+  .main .experience h4 {
+    font-size: 1rem;
+  }
+}
 .main .experience .exp-list {
   display: flex;
   justify-content: center;
@@ -347,7 +358,8 @@ nav ul li a {
 .main .skill .skill-list {
   display: flex;
   padding-top: 2rem;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-content: center;
 }
 .main .skill .skill-list li {
   padding: 0.7rem;
